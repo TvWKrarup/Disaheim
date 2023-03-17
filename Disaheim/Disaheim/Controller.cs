@@ -11,6 +11,7 @@ namespace Disaheim
         // Properties
         public List<Book> Books { get; set; }
         public List<Amulet> Amulets { get; set; }
+        public List<Course> Courses { get; set; }
 
         // Operations
         // Constructor
@@ -18,11 +19,12 @@ namespace Disaheim
         {
             Books = new List<Book>();
             Amulets = new List<Amulet>();
+            Courses = new List<Course>();
         }
 
 
         // Methods
-        // De to metoder hedder det samme, men er overloaded.
+        // De tre metoder hedder det samme, men er overloaded.
         public void AddToList(Book book)
         {
             Books.Add(book);
@@ -32,5 +34,14 @@ namespace Disaheim
         {
             Amulets.Add(amulet);
         }
+
+        public void AddToList(Course course)
+        {
+            Courses.Add(course);
+        }
+
+
+
+
     }
 }

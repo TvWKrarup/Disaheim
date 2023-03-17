@@ -6,35 +6,41 @@ using System.Threading.Tasks;
 
 namespace Disaheim
 {
-    public class Book
+    public class Book : Merchandise
     {
         //Properties
-        public string ItemId { get; set; }
         public string Title { get; set; }
         public double Price { get; set; }
 
         // Operations
         // Constructor
+        // itemId from baseclass "Merchandise" 
         public Book(string itemId, string title, double price)
         {
-            this.ItemId = itemId;
+            base.ItemId = itemId;
             this.Title = title;
-            this.Price = price;
+            this.Price = price; 
         }
 
-        // Chained constructor 
-
-        public Book(string itemId, string title) :
-            this(itemId, title, 0.0)
-        {}
-        public Book(string itemId) :
-            this(itemId, "", 0.0)
-        {}
+        // Overloaded constructor  
+        public Book(string itemId, string title)
+        {
+            base.ItemId = itemId;
+            this.Title = title;
+            this.Price = 0.0;
+        
+        }
+        public Book(string itemId)
+        {
+            base.ItemId= itemId;
+            this.Title = "";
+            this.Price = 0.0;
+        }
 
         // Overridden methid
         public override string ToString()
         {
-            return $"ItemId: {ItemId}, Title: {Title}, Price: {Price}";
+            return $"ItemId: {base.ItemId}, Title: {Title}, Price: {Price}";
         }
     }
 }
