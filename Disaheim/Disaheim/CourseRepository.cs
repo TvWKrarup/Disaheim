@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Disaheim
 {
-    public class CourseRepository : Utility
+    public class CourseRepository
     {
         // Attributes
         private List<Course> courses;
@@ -34,12 +34,13 @@ namespace Disaheim
         // Alle kursers værdi samles i "total" og returneres når metoden kaldes.
         public double GetTotalValue()
         {
+            Utility utility = new Utility();
+            double total = 0;
             foreach (Course course in courses)
             {
-                double total =+ GetValueOfCourse(course);
-                return total;
+                total += utility.GetValueOfCourse(course);    
             }
-            return 0;
+            return total;
         }
     }
 }

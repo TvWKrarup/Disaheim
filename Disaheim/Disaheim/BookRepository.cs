@@ -31,15 +31,17 @@ namespace Disaheim
             return null;
         }
 
+        
+
         // Alle bøgers værdi samles i "total" og returneres når metoden kaldes.
         public double GetTotalValue()
         {
+            double total = 0;
             foreach (Book book in _books)
             {  
-                double total =+ book.Price;
-                return total;
+                total += book.Price;
             }
-            return 0; 
+            return total;
         }
     }
 }

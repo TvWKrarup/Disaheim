@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Disaheim
 {
-    // Tror ikke den skal nedarve fra Utility - men hvordan kalder jeg ellers på dens metode jeg skal bruge i GetTotalValue?
-    public class AmuletRepository : Utility
+    public class AmuletRepository
     {
         // Attributes
         private List<Amulet> _amulets;
@@ -35,13 +34,14 @@ namespace Disaheim
         // Alle amuletters værdi samles i "total" og returneres når metoden kaldes.
         public double GetTotalValue()
         {
+            Utility utility = new Utility();
+            double total = 0;
             foreach (Amulet amulet in _amulets)
             {
-                double total =+ GetValueOfAmulet(amulet);
-                return total;
+                total += utility.GetValueOfAmulet(amulet);   
             }
-            return 0;
-            
+            return total;
+
         }
         
         
