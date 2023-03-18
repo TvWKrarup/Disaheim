@@ -9,35 +9,36 @@ namespace Disaheim
     public class Controller
     {
         // Properties
-        public List<Book> Books { get; set; }
-        public List<Amulet> Amulets { get; set; }
-        public List<Course> Courses { get; set; }
+
+        private BookRepository _bookRepo;
+        private AmuletRepository _amuletRepo;
+        private CourseRepository _courseRepo;
 
         // Operations
         // Constructor
         public Controller()
         {
-            Books = new List<Book>();
-            Amulets = new List<Amulet>();
-            Courses = new List<Course>();
+            _bookRepo = new List<Book>();
+            _amulets = new List<Amulet>();
+            _courses = new List<Course>();
         }
-
+        
 
         // Methods
         // De tre metoder hedder det samme, men er overloaded.
         public void AddToList(Book book)
         {
-            Books.Add(book);
+            _books.Add(book);
         }
 
         public void AddToList(Amulet amulet)
         {
-            Amulets.Add(amulet);
+            _amulets.Add(amulet);
         }
 
         public void AddToList(Course course)
         {
-            Courses.Add(course);
+            _courses.Add(course);
         }
 
 
