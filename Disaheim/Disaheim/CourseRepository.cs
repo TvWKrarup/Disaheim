@@ -9,7 +9,7 @@ namespace Disaheim
     public class CourseRepository
     {
         // Attributes
-        private List<Course> courses;
+        private List<Course> courses = new List<Course>();
 
         // Methods
 

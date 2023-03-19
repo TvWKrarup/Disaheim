@@ -9,42 +9,27 @@ namespace Disaheim
 {
     public class Controller
     {
-        // Properties
-
-        private readonly BookRepository _bookRepo; 
-        private readonly AmuletRepository _amuletRepo;
-        private readonly CourseRepository _courseRepo;
+        // Attributter
+        private MerchandiseRepository merchandiseRepo;
+        private CourseRepository courseRepo;
 
         // Operations
         // Constructor
         public Controller()
         {
-            _bookRepo = new BookRepository();
-            _amuletRepo = new AmuletRepository();
-            _courseRepo = new CourseRepository();
+            merchandiseRepo = new MerchandiseRepository();
+            courseRepo = new CourseRepository();
         }
-        
        
         // Methods
-        // De tre metoder hedder det samme, men er overloaded.
-        public static void AddToList(Book book)
-        {  
-            BookRepository bookRepository = new BookRepository();
-            bookRepository.AddBook(book);
-        }
-
-        public void AddToList(Amulet amulet)
+        public void AddToList(Merchandise merchandise)
         {
-            _amuletRepo.AddAmulet(amulet);
+            merchandiseRepo.AddMerchandise(merchandise);
         }
 
         public void AddToList(Course course)
         {
-            _courseRepo.AddCourse(course);
-        }
-       
-
-
-
+            courseRepo.AddCourse(course);
+        }   
     }
 }
