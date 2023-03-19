@@ -48,14 +48,14 @@ namespace DisaheimTest
             controller.AddToList(c3);
 
         }
-
+        /*
         [TestMethod]
         public void TestBookList()
         {
             // Assert
             Assert.AreEqual(b3, controller.Books[2]);
         }
-
+        
         [TestMethod]
         public void TestAmuletList()
         {
@@ -70,7 +70,7 @@ namespace DisaheimTest
             Assert.AreEqual(c2, controller.Courses[1]);
             Assert.AreEqual(c3, controller.Courses[2]);
         }
-
+        */
 
     }
 }

@@ -43,9 +43,5 @@ namespace Disaheim
             return $"ItemId: {base.ItemId}, Quality: {Quality}, Design: {Design}";
         }
 
-
-
-
-
     }
 }
