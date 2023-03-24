@@ -42,5 +42,13 @@ namespace Disaheim
         {
             return $"ItemId: {base.ItemId}, Title: {Title}, Price: {Price}";
         }
+
+        // Method fra Interface "IValuable" - skrevet som abstrakt i Merchandise som denne klasse nedarver fra.
+        // Vi overskriver den abstrakte metode med denne.
+        override public double GetValue()
+        {
+            return this.Price;     
+        }
+
     }
 }
