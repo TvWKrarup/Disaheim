@@ -8,10 +8,18 @@ namespace Disaheim
 {
     public class Amulet : Merchandise
     {
+        // Attributter
+        private static double _lowQualityValue = 12.5;
+        private static double _mediumQualityValue = 20;
+        private static double _highQualityValue = 27.5;
+
         // Properties
         public string Design { get; set; }
         public Level Quality { get; set; }
-
+        public static double LowQualityValue { get; set; }
+        public static double MediumQualityValue { get; set; }
+        public static double HighQualityValue { get; set; }
+        
         // Operations
         // Constructor
         // Default - itemid from baseclass "Merchandise"
@@ -41,6 +49,25 @@ namespace Disaheim
         public override string ToString()
         {
             return $"ItemId: {base.ItemId}, Quality: {Quality}, Design: {Design}";
+        }
+
+        // Method fra Interface "IValuable" - skrevet som abstrakt i Merchandise som denne klasse nedarver fra.
+        // Vi overskriver den abstrakte metode med denne.
+        public override double GetValue()
+        {
+                if (this.Quality == Level.low)
+                {
+                    return _lowQualityValue;
+                }
+                if (this.Quality == Level.medium)
+                {
+                    return _mediumQualityValue;
+                }
+                if (this.Quality == Level.high)
+                {
+                    return _highQualityValue;
+                }
+            return 0;
         }
 
     }
