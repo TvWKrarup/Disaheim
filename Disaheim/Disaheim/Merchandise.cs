@@ -13,7 +13,7 @@ namespace Disaheim
         public string ItemId { get; set; }
 
 
-        // Operations   
+        // Operations
         // Methods
         public override string ToString()
         {

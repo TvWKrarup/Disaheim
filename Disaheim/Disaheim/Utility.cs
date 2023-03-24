@@ -33,7 +33,7 @@ public class Utility
         get { return _courseHourValue; }
         set { _courseHourValue = value; }
     }
-
+    /*
     // Opdatering i program. GetValueOfBook + Amulet laves til én metode "GetValueOfMerchandise"
     public double GetValueOfMerchandise(Merchandise merchandise)
     {
@@ -60,7 +60,7 @@ public class Utility
         return 0;
 
     }
-
+    */
     
     //public double GetValueOfBook(Book book)
     //{

@@ -37,7 +37,7 @@ namespace Disaheim
             this.Price = 0.0;
         }
 
-        // Overridden methid
+        // Overridden method
         public override string ToString()
         {
             return $"ItemId: {base.ItemId}, Title: {Title}, Price: {Price}";

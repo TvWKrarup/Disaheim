@@ -8,7 +8,6 @@ namespace Disaheim
 {
     public class MerchandiseRepository
     {
-
         private List<Merchandise> merchandises = new List<Merchandise>();
 
         public void AddMerchandise(Merchandise merchandise)
@@ -39,8 +38,6 @@ namespace Disaheim
                 total += utility.GetValueOfMerchandise(merchandise);
             }
             return total;
-        }
-
-       
+        }   
     }
 }
