@@ -8,28 +8,19 @@ using System.Threading.Tasks;
 namespace Disaheim
 {
     public class Controller
+    
     {
-        // Attributter
-        private MerchandiseRepository merchandiseRepo;
-        private CourseRepository courseRepo;
+        
+        public ValuableRepository ValuableRepository { get; set; }
 
-        // Operations
-        // Constructor
         public Controller()
         {
-            merchandiseRepo = new MerchandiseRepository();
-            courseRepo = new CourseRepository();
-        }
-       
-        // Methods
-        public void AddToList(Merchandise merchandise)
-        {
-            merchandiseRepo.AddMerchandise(merchandise);
+            this.ValuableRepository = new ValuableRepository();
         }
 
-        public void AddToList(Course course)
+        public void AddToList(IValuable valuable)
         {
-            courseRepo.AddCourse(course);
-        }   
+            this.ValuableRepository.AddValuable(valuable);
+        }
     }
 }

@@ -13,7 +13,11 @@ namespace Disaheim
         public int DurationInMinutes { get; set; }
 
         private static double _courseHourValue = 875;
-        public static double CourseHourValue { get; set; }
+        public static double CourseHourValue 
+        { 
+            get { return _courseHourValue; }
+            set { _courseHourValue = value; } 
+        }
 
         // Operations
         // Constructor
@@ -31,7 +35,7 @@ namespace Disaheim
         // Methods
         public override string ToString()
         {
-            return $"Name: {this.Name}, Duration in Minutes: {this.DurationInMinutes}";
+            return $"Name: {this.Name}, Duration in Minutes: {this.DurationInMinutes}, Value: {GetValue()}";
         }
 
         // Implementation af IValuable interface
@@ -55,9 +59,5 @@ namespace Disaheim
             double coursePrice = courseHours * CourseHourValue;
             return coursePrice;
         }
-    }
-
-
-
-    }
+    } 
 }

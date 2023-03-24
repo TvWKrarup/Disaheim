@@ -60,15 +60,15 @@ namespace Disaheim
         {
                 if (this.Quality == Level.low)
                 {
-                    return LowQualityValue;
+                    return _lowQualityValue;
                 }
                 if (this.Quality == Level.medium)
                 {
-                    return MediumQualityValue;
+                    return _mediumQualityValue;
                 }
                 if (this.Quality == Level.high)
                 {
-                    return HighQualityValue;
+                    return _highQualityValue;
                 }
             return 0;
         }
