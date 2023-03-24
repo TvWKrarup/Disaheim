@@ -20,9 +20,6 @@ namespace Disaheim
         public static double MediumQualityValue { get; set; }
         public static double HighQualityValue { get; set; }
         
-
-
-
         // Operations
         // Constructor
         // Default - itemid from baseclass "Merchandise"
